@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalmDown"
         mc:Ignorable="d"
-        Title="MainWindow" Height="513" Width="800">
+        Title="MainWindow" Height="550
+        " Width="800">
     <Window.Resources>
         <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>
     </Window.Resources>
+
     <Grid Style="{DynamicResource GridStyle1}" Background="#FF2B3964" Margin="0,0,0,-6" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -18,19 +20,9 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="690*"/>
-            <ColumnDefinition Width="121*"/>
-        </Grid.ColumnDefinitions>
-        <Rectangle Fill="#FF4050A0" RadiusX="20" RadiusY="20" Margin="24,23,24,23" Grid.ColumnSpan="2"/>
-        <Button Content="Wellness Stretches" Margin="426,194,94,253" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans"/>
-        <Button Content="Smile Section" Margin="426,311,94,138" Click="Button_Click" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans"/>
-        <Button Content="Tea Selector" Margin="169,311,351,138" Click="Button_Click" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans"/>
-        <Button Content="Resources" Margin="666,435,43,40" Click="Button_Click" Style="{StaticResource SlightlyLessRoundButton}" Grid.ColumnSpan="2"/>
-        <CheckBox Content="Music Player" Margin="44,0,403,40" Background="#FFD2E0ED" Foreground="#FFD2E0ED" FontSize="14" Height="21" VerticalAlignment="Bottom"/>
-        <Button Content="Guided Breathing" Margin="169,194,351,255" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Click="Button_Click_1"/>
-        <Label Content="The Calm Down Zzzone" HorizontalAlignment="Left" Height="95" Margin="57,49,0,0" VerticalAlignment="Top" Width="697" Foreground="#FFD2E0ED" FontSize="64" FontFamily="Liberation Sans" Grid.ColumnSpan="2"/>
-
-
+        
+        <Rectangle Fill="#FF4050A0" RadiusX="20" RadiusY="20" Margin="24,23,24,23" />
+        <Frame x:Name="AppFrame" />
     </Grid>
+
 </Window>
