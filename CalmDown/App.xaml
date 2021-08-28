@@ -1,0 +1,49 @@
+﻿<Application x:Class="CalmDown.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CalmDown"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="RoundButtonTemplate" TargetType="Button">
+                <Setter Property="Background" Value="#FF2B3964"/>
+                <Setter Property="Foreground" Value="#FFD2E0ED"/>
+                <Setter Property= "BorderBrush" Value="{x:Null}"/>
+                <Setter Property= "FontSize" Value="18"/>
+                <Setter Property= "FontStyle" Value="Liberation Sans"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="15" Background="{TemplateBinding Background}"
+                                BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="SlightlyLessRoundButton" TargetType="Button">
+                <Setter Property="Background" Value="#FF2B3964"/>
+                <Setter Property="Foreground" Value="#FFD2E0ED"/>
+                <Setter Property= "BorderBrush" Value="{x:Null}"/>
+                <Setter Property= "FontSize" Value="16"/>
+                <Setter Property= "FontStyle" Value="Liberation Sans"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" Background="{TemplateBinding Background}"
+                                BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
