@@ -36,27 +36,27 @@ namespace CalmDown.pages
         private void clickStretches(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Give me a stretch!", "Assets\\Stretch"));
+            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Give me a stretch!", "..\\..\\assets\\stretches"));
         }
 
         private void clickTea(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Pick me a tea!", "Assets\\Tea"));
+            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Pick me a tea!", "..\\..\\assets\\teas"));
         }
 
         private void clickSmile(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "I need smiles!", "Assets\\Smile"));
+            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "I need smiles!", "..\\..\\assets\\cutePics"));
         }
 
-        private void CheckMusic_Checked(object sender, RoutedEventArgs e)
+         private void CheckMusic_Checked(object sender, RoutedEventArgs e)
         {
             SoundPlayer sp = new SoundPlayer();
             if (CheckMusic.IsChecked == true){ 
-                sp.SoundLocation = "RainWAV.wav";
-                sp.Play();
+                sp.SoundLocation = "..\\..\\assets\\RainSmall.wav";
+                sp.PlayLooping();
             }
             else
             {
