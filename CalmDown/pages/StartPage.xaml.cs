@@ -26,7 +26,6 @@ namespace CalmDown.pages
             InitializeComponent();
         }
 
-        
 
         private void clickBreathing(object sender, RoutedEventArgs e)
         {
@@ -52,11 +51,11 @@ namespace CalmDown.pages
             ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "I need smiles!", "Assets\\Smile"));
         }
 
-        private void clickCheckbox(object sender, RoutedEventArgs e)
+        private void CheckMusic_Checked(object sender, RoutedEventArgs e)
         {
             SoundPlayer sp = new SoundPlayer();
             if (CheckMusic.IsChecked == true){ 
-                sp.SoundLocation = "assets\\RainforestWAV.wav";
+                sp.SoundLocation = "RainWAV.wav";
                 sp.Play();
             }
             else
