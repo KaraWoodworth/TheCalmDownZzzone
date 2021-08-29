@@ -66,5 +66,11 @@ namespace CalmDown.pages
                sp.Stop();
              }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Resources());
+        }
     }
-}S
+}

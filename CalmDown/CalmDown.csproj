@@ -72,6 +72,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\StartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +84,9 @@
   <ItemGroup>
     <Compile Include="pages\FeaturePage.xaml.cs">
       <DependentUpon>FeaturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Resources.xaml.cs">
+      <DependentUpon>Resources.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
