@@ -17,7 +17,7 @@
         <Button x:Name="ButtonSmile" Content="Smile Section" Margin="477,311,43,138"  Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Grid.RowSpan="2" Click="clickSmile"/>
         <Button x:Name="ButtonTea" Content="Tea Selector" Margin="0,311,450,138"  Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Grid.RowSpan="2" HorizontalAlignment="Right" Width="280" Click="clickTea"/>
         <Button Content="Resources" Margin="666,82.826,0,0"  Style="{StaticResource SlightlyLessRoundButton}" HorizontalAlignment="Left" Width="91" Height="75" VerticalAlignment="Top" Grid.Row="1"/>
-        <CheckBox Content="Music Player" Margin="44,0,403,40" Background="#FFD2E0ED" Foreground="#FFD2E0ED" FontSize="14" Height="21" VerticalAlignment="Bottom" Grid.Row="1"/>
+        <CheckBox x:Name="CheckMusic" Content="Music Player" Margin="44,0,403,40" Background="#FFD2E0ED" Foreground="#FFD2E0ED" FontSize="14" Height="21" VerticalAlignment="Bottom" Grid.Row="1"/>
         <Button x:Name="ButtonBreathing" Content="Guided Breathing" Margin="0,194,450,57" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" HorizontalAlignment="Right" Width="280" Click="clickBreathing" />
         <Label Content="The Calm Down Zzzone" HorizontalAlignment="Left" Height="95" Margin="57,49,0,0" VerticalAlignment="Top" Width="697" Foreground="#FFD2E0ED" FontSize="64" FontFamily="Liberation Sans"/>
     </Grid>

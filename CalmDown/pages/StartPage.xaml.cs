@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -48,6 +49,19 @@ namespace CalmDown.pages
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "Make me smile", "Assets\\Smile"));
+        }
+
+        private void clickCheckbox(object sender, RoutedEventArgs e)
+        {
+            SoundPlayer sp = new SoundPlayer();
+            if ((bool)(CheckMusic.IsChecked)){ 
+                sp.SoundLocation = "assets\\RainforestWAV.wav";
+                sp.Play();
+            }
+            else
+            {
+                sp.Stop();
+            }
         }
     }
 }
