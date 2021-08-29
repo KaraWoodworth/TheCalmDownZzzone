@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550
         " Width="800"
-        >
+        Icon="Icon.ico">
     <Window.Resources>
         <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>
     </Window.Resources>
