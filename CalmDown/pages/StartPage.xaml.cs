@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace CalmDown.pages
 {
     /// <summary>
@@ -22,7 +21,6 @@ namespace CalmDown.pages
     /// </summary>
     public partial class StartPage : Page
     {
-        SoundPlayer sp = new SoundPlayer();
         public StartPage()
         {
             InitializeComponent();
@@ -32,39 +30,39 @@ namespace CalmDown.pages
 
         private void clickBreathing(object sender, RoutedEventArgs e)
         {
-            //TODO: make new page for breathing since its different in some way
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new FeaturePage(ButtonBreathing.Content.ToString(), "Assets\\Breath",true));
         }
 
         private void clickStretches(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Recommend Stretch", "Assets\\Stretch"));
+            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Give me a stretch!", "Assets\\Stretch"));
         }
 
         private void clickTea(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Recommend A Tea", "Assets\\Tea"));
+            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Pick me a tea!", "Assets\\Tea"));
         }
 
         private void clickSmile(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "Make me smile", "Assets\\Smile"));
+            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "I need smiles!", "Assets\\Smile"));
         }
 
-        private void CheckMusic_Checked(object sender, RoutedEventArgs e)
+        private void clickCheckbox(object sender, RoutedEventArgs e)
         {
-
-            if (CheckMusic.IsChecked == true)
-            {
-                    sp.SoundLocation = "RainWAV.wav";
-                    sp.Play();
+            SoundPlayer sp = new SoundPlayer();
+            if (CheckMusic.IsChecked == true){ 
+                sp.SoundLocation = "assets\\RainforestWAV.wav";
+                sp.Play();
             }
-            if (CheckMusic.IsChecked == false)
-             {
-               sp.Stop();
-             }
+            else
+            {
+                sp.Stop();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
