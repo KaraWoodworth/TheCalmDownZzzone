@@ -32,7 +32,7 @@ namespace CalmDown.pages
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
 
-            ns.Navigate(new FeaturePage(ButtonBreathing.Content.ToString(), "..\\..\\assets\\breathe", true));
+            ns.Navigate(new FeaturePage(ButtonBreathing.Content.ToString(), "..\\..\\assets\\breathe\\box_breathing_gif_healthline.gif", true));
 
         }
 

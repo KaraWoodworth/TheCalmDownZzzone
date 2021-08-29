@@ -52,7 +52,7 @@ namespace CalmDown.pages
             isGIF = isgif;
             pageLabel.Content = titletext;
             folderpath = pagepath;
-            pageMedia.Source = new Uri(Path.GetFullPath("Assets/Breath/box_breathing_gif_healthline.gif"));
+            pageMedia.Source = new Uri(Path.GetFullPath(pagepath));
             pageButton.IsEnabled = false;
             pageButton.Visibility = Visibility.Hidden;
             pageImage.Visibility = Visibility.Hidden;
