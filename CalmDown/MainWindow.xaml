@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalmDown"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550
+        Title="The Calm Down Zzzone" Height="550
         " Width="800"
         Icon="Icon.ico">
     <Window.Resources>
