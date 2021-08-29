@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace CalmDown.pages
 {
     /// <summary>
@@ -21,6 +22,7 @@ namespace CalmDown.pages
     /// </summary>
     public partial class StartPage : Page
     {
+        SoundPlayer sp = new SoundPlayer();
         public StartPage()
         {
             InitializeComponent();
@@ -51,17 +53,18 @@ namespace CalmDown.pages
             ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "Make me smile", "Assets\\Smile"));
         }
 
-        private void clickCheckbox(object sender, RoutedEventArgs e)
+        private void CheckMusic_Checked(object sender, RoutedEventArgs e)
         {
-            SoundPlayer sp = new SoundPlayer();
-            if ((bool)(CheckMusic.IsChecked)){ 
-                sp.SoundLocation = "assets\\RainforestWAV.wav";
-                sp.Play();
-            }
-            else
+
+            if (CheckMusic.IsChecked == true)
             {
-                sp.Stop();
+                    sp.SoundLocation = "RainWAV.wav";
+                    sp.Play();
             }
+            if (CheckMusic.IsChecked == false)
+             {
+               sp.Stop();
+             }
         }
     }
-}
+}S
