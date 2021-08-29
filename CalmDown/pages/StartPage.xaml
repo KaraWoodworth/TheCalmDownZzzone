@@ -15,10 +15,10 @@
         </Grid.RowDefinitions>
         <Button x:Name="ButtonStretches" Content="Wellness Stretches" Margin="477,194,43,55" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Click="clickStretches"/>
         <Button x:Name="ButtonSmile" Content="Smile Section" Margin="477,311,43,138"  Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Grid.RowSpan="2" Click="clickSmile"/>
-        <Button x:Name="ButtonTea" Content="Tea Selector" Margin="0,311,450,138"  Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Grid.RowSpan="2" HorizontalAlignment="Right" Width="280" Click="clickTea"/>
-        <Button Content="Resources" Margin="666,82.826,0,0"  Style="{StaticResource SlightlyLessRoundButton}" HorizontalAlignment="Left" Width="91" Height="75" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button x:Name="ButtonTea" Content="Tea Selector" Margin="70,311,450,138.4"  Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Grid.RowSpan="2" Click="clickTea"/>
+        <Button Content="Resources" Margin="0,83,43,40.4"  Style="{StaticResource SlightlyLessRoundButton}" Grid.Row="1" HorizontalAlignment="Right" Width="91" Click="Button_Click"/>
         <CheckBox x:Name="CheckMusic" Content="Music Player" Margin="44,0,403,40" Background="#FFD2E0ED" Foreground="#FFD2E0ED" FontSize="14" Height="21" VerticalAlignment="Bottom" Grid.Row="1"/>
-        <Button x:Name="ButtonBreathing" Content="Guided Breathing" Margin="0,194,450,57" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" HorizontalAlignment="Right" Width="280" Click="clickBreathing" />
+        <Button x:Name="ButtonBreathing" Content="Guided Breathing" Margin="70,194,450,57" Style="{StaticResource RoundButtonTemplate}" FontFamily="Liberation Sans" Click="clickBreathing" />
         <Label Content="The Calm Down Zzzone" HorizontalAlignment="Left" Height="95" Margin="57,49,0,0" VerticalAlignment="Top" Width="697" Foreground="#FFD2E0ED" FontSize="64" FontFamily="Liberation Sans"/>
     </Grid>
 </Page>
