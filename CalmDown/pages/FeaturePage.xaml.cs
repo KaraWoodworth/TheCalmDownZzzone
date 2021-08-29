@@ -26,6 +26,7 @@ namespace CalmDown.pages
         public FeaturePage()
         {
             InitializeComponent();
+            this.ShowsNavigationUI = false;
         }
         /// <summary>
         /// sets up page based on arguments
@@ -78,7 +79,8 @@ namespace CalmDown.pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new StartPage());
+            
+            ns.Navigate(new StartPage());            
         }
     }
 }

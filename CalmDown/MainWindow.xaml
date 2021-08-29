@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:CalmDown"
         mc:Ignorable="d"
         Title="MainWindow" Height="550
-        " Width="800">
+        " Width="800"
+        >
     <Window.Resources>
         <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>
     </Window.Resources>
@@ -22,7 +23,6 @@
         </Grid.RenderTransform>
         
         <Rectangle Fill="#FF4050A0" RadiusX="20" RadiusY="20" Margin="24,23,24,23" />
-        <Frame x:Name="AppFrame" />
+        <Frame x:Name="AppFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
-
 </Window>

@@ -24,6 +24,7 @@ namespace CalmDown.pages
         public StartPage()
         {
             InitializeComponent();
+            this.ShowsNavigationUI = false;
         }
 
 
@@ -31,12 +32,14 @@ namespace CalmDown.pages
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new FeaturePage(ButtonBreathing.Content.ToString(), "Assets\\Breath",true));
+            
         }
 
         private void clickStretches(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Give me a stretch!", "..\\..\\assets\\stretches"));
+            
         }
 
         private void clickTea(object sender, RoutedEventArgs e)
