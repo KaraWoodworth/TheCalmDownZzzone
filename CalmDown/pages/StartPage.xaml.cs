@@ -32,34 +32,34 @@ namespace CalmDown.pages
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
 
-            ns.Navigate(new FeaturePage(ButtonBreathing.Content.ToString(), "..\\..\\assets\\breathe\\box_breathing_gif_healthline.gif", true));
+            ns.Navigate(new FeaturePage(ButtonBreathing.Content.ToString(), "assets\\breathe\\box_breathing_gif_healthline.gif", true));
 
         }
 
         private void clickStretches(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Give me a stretch!", "..\\..\\assets\\stretches"));
+            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Give me a stretch!", "assets\\stretches"));
             
         }
 
         private void clickTea(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Pick me a tea!", "..\\..\\assets\\teas"));
+            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Pick me a tea!", "assets\\teas"));
         }
 
         private void clickSmile(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "I need smiles!", "..\\..\\assets\\cutePics"));
+            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "I need smiles!", "assets\\cutePics"));
         }
 
          private void CheckMusic_Checked(object sender, RoutedEventArgs e)
         {
             SoundPlayer sp = new SoundPlayer();
             if (CheckMusic.IsChecked == true){ 
-                sp.SoundLocation = "..\\..\\assets\\RainSmall.wav";
+                sp.SoundLocation = "assets\\RainSmall.wav";
                 sp.PlayLooping();
             }
             else
