@@ -54,7 +54,7 @@ namespace CalmDown.pages
         private void clickCheckbox(object sender, RoutedEventArgs e)
         {
             SoundPlayer sp = new SoundPlayer();
-            if ((bool)(CheckMusic.IsChecked)){ 
+            if (CheckMusic.IsChecked == true){ 
                 sp.SoundLocation = "assets\\RainforestWAV.wav";
                 sp.Play();
             }
