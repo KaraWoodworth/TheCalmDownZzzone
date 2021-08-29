@@ -75,7 +75,6 @@ namespace CalmDown.pages
             }
             
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);

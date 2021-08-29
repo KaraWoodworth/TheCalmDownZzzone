@@ -11,10 +11,10 @@
 
     <Grid>
         <Label x:Name="pageLabel" Content="Title" FontSize="64" HorizontalAlignment="Center" Foreground="#FFD2E0ED"/>
-        <Button x:Name="pageButton" Content="Button" Margin="252,0,268,10" Style="{StaticResource RoundButtonTemplate}" Click="GenerateLabel" FontFamily="Liberation Sans" Height="66" VerticalAlignment="Bottom"/>
+        <Button x:Name="pageButton" Content="Button" Margin="0,0,272,41.6" Style="{StaticResource RoundButtonTemplate}" Click="GenerateLabel" FontFamily="Liberation Sans" Height="39" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="280"/>
         <Image x:Name="pageImage" Height="286" Margin="10,83,10,0" VerticalAlignment="Top"/>
-        <MediaElement x:Name="pageMedia" MediaEnded="pageMedia_MediaEnded" UnloadedBehavior="Manual"  LoadedBehavior="Play" Stretch="Uniform"  Margin="193,83,185,29"/>
-        <Button Content="Back" Margin="678,0,22,9.6" VerticalAlignment="Bottom" Style="{StaticResource SlightlyLessRoundButton}" Height="42" Click="Button_Click"/>
 
+        <MediaElement x:Name="pageMedia" MediaEnded="pageMedia_MediaEnded" UnloadedBehavior="Manual"  LoadedBehavior="Play" Stretch="Uniform"  Margin="193,83,185,29"/>
+        <Button Content="Back" Margin="0,0,68,41.6" Style="{StaticResource SlightlyLessRoundButton}" Click="Button_Click" Height="37" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100"/>
     </Grid>
 </Page>
