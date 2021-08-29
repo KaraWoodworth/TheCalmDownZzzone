@@ -22,6 +22,7 @@ namespace CalmDown.pages
     public partial class FeaturePage : Page
     {
         private String folderpath = "Assets\\Test";
+        private Boolean isGIF = false;
         public FeaturePage()
         {
             InitializeComponent();
@@ -38,29 +39,47 @@ namespace CalmDown.pages
             pageButton.Content = buttontext;
             pageLabel.Content = titletext;
             folderpath = pagepath;
+        }
+        /// <summary>
+        /// Overload for constructing
+        /// </summary>
+        /// <param name="titletext"></param>
+        /// <param name="pagepath"></param>
+        public FeaturePage(String titletext, String pagepath, Boolean isgif)
+        {
+            InitializeComponent();
+            isGIF = isgif;
+            pageLabel.Content = titletext;
+            folderpath = pagepath;
+            pageMedia.Source = new Uri(Path.GetFullPath("Assets/Breath/box_breathing_gif_healthline.gif"));
+            pageButton.IsEnabled = false;
+            pageButton.Visibility = Visibility.Hidden;
+            pageImage.Visibility = Visibility.Hidden;
+        }
 
-
+        private void pageMedia_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            pageMedia.Position = new TimeSpan(0, 0, 1);
+            pageMedia.Play();
         }
 
         private void GenerateLabel(object sender, RoutedEventArgs e)
         {
+            
             string selectedFileName = CoreCore.getRandomPath(folderpath);
-            if(selectedFileName != "")
+            if (selectedFileName != "")
             {
                 Uri fileUri = new Uri(Path.GetFullPath(selectedFileName));
 
                 pageImage.Source = new BitmapImage(fileUri);
             }
-
+            
         }
 
-<<<<<<< HEAD
-=======
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new StartPage());
         }
->>>>>>> da1e30685f7e79410f681bec2e746cad7cb56744
     }
 }

@@ -30,7 +30,8 @@ namespace CalmDown.pages
 
         private void clickBreathing(object sender, RoutedEventArgs e)
         {
-            //TODO: make new page for breathing since its different in some way
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Assets\\Breath",true));
         }
 
         private void clickStretches(object sender, RoutedEventArgs e)
