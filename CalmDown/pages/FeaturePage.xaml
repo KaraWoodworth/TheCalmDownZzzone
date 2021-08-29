@@ -9,8 +9,9 @@
       Title="CoreTest">
 
     <Grid>
-        <Label x:Name="pageLabel" Content="Title" FontSize="64" HorizontalAlignment="Center"/>
+        <Label x:Name="pageLabel" Content="Title" FontSize="64" HorizontalAlignment="Center" Foreground="#FFD2E0ED"/>
         <Button x:Name="pageButton" Content="Button" Margin="252,0,268,10" Style="{StaticResource RoundButtonTemplate}" Click="GenerateLabel" FontFamily="Liberation Sans" Height="66" VerticalAlignment="Bottom"/>
         <Image x:Name="pageImage" Height="286" Margin="10,83,10,0" VerticalAlignment="Top"/>
+        <Button Content="Back" Margin="678,0,22,9.6" VerticalAlignment="Bottom" Style="{StaticResource SlightlyLessRoundButton}" Height="42" Click="Button_Click"/>
     </Grid>
 </Page>

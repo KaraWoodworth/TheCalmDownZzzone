@@ -38,6 +38,8 @@ namespace CalmDown.pages
             pageButton.Content = buttontext;
             pageLabel.Content = titletext;
             folderpath = pagepath;
+
+
         }
 
         private void GenerateLabel(object sender, RoutedEventArgs e)
@@ -50,6 +52,12 @@ namespace CalmDown.pages
                 pageImage.Source = new BitmapImage(fileUri);
             }
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new StartPage());
         }
     }
 }

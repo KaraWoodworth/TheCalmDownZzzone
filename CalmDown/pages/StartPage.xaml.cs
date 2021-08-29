@@ -36,19 +36,19 @@ namespace CalmDown.pages
         private void clickStretches(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Recommend Stretch", "Assets\\Stretch"));
+            ns.Navigate(new FeaturePage(ButtonStretches.Content.ToString(), "Give me a stretch!", "Assets\\Stretch"));
         }
 
         private void clickTea(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Recommend A Tea", "Assets\\Tea"));
+            ns.Navigate(new FeaturePage(ButtonTea.Content.ToString(), "Pick me a tea!", "Assets\\Tea"));
         }
 
         private void clickSmile(object sender, RoutedEventArgs e)
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "Make me smile", "Assets\\Smile"));
+            ns.Navigate(new FeaturePage(ButtonSmile.Content.ToString(), "I need smiles!", "Assets\\Smile"));
         }
 
         private void clickCheckbox(object sender, RoutedEventArgs e)
